@@ -5,5 +5,13 @@ socket.on('connect', function () {
 });
 
 socket.on('message', function(message) {
-	console.log(message.text);
+	$('#messageLog').append('<p>' + message.text + '</p>');
+});
+
+$('#sendMessage').click(function () {
+	var message = $('#message').val();
+	socket.emit('message', {
+		text: message
+	});
+	$('#message').val('');
 });
