@@ -5,17 +5,14 @@
 	<title>Socket.io basics!</title>
 </head>
 <body>
-	<h1>Hello world!</h1>
 
-	<input id="message" type="text" name="message">
-	<button id="sendMessage">Send message</button>
+	<h1>Join chat</h1>
 
-	<div id="messageLog"></div>
+	<form action="chat.html">
+		<label for="name">Display name:</label>
+		<input name="name" id="name" type="text">
+		<input type="submit" value="Join">
+	</form>
 
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./js/socket.io.js"></script>
-	<script type="text/javascript" src="./js/moment.js"></script>
-	<script type="text/javascript" src="./js/queryparams.js"></script>
-	<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>
