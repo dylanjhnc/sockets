@@ -3,6 +3,8 @@ var socket = io();
 var room = getQueryVariable('room');
 var name = getQueryVariable('name') || 'Anonymous';
 
+$('h1.room-title').text(room);
+
 socket.on('connect', function () {
 	console.log('Connected to socket.io server!');
 });
